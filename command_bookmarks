@@ -1,0 +1,18 @@
+#git status
+git status
+
+#git log graph
+git log --oneline --graph --decorate --all
+
+#git diff stat
+git diff --stat
+
+#docker prune all
+docker stop $(docker ps -q) \
+    && docker rm $(docker ps -aq) \
+    && docker system prune -f
+
+#find old logs
+find . -type f -name '*.log' \
+    -mtime +7 \
+    -exec rm {} +
