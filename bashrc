@@ -18,8 +18,8 @@ export PATH
 
 # User specific aliases and functions
 
-. "$HOME/.local/bin/env"
-. "$HOME/.cargo/env"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
